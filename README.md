@@ -106,6 +106,10 @@ You need to right-click or Control-click the app and select “Open”.
 
 Download _dissector.py_ and c64labels.json into the same folder on your computer.
 
+    python3 dissector.py 
+
+
+
 ### Prerequisites
 
 At least this is needed to run the script directly:
