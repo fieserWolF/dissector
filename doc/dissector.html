@@ -47,10 +47,14 @@
 <td>full illegal opcode support</td>
 </tr>
 <tr class="even">
+<td>cycles</td>
+<td>used cpu-cycles shown for each opcode</td>
+</tr>
+<tr class="odd">
 <td>extensive info</td>
 <td>extensive C64 memory map carefully gathered from best sources I could find online</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>assemblers</td>
 <td>ACME and KickAssembler supported, easy to implement other assemblers</td>
 </tr>
@@ -93,19 +97,6 @@ Example: ./dissector.py test.prg test.a 2000 -lf c64labels.json -o 2 -l 100 -t a
 <li>fieserWolF/Abyss-Connection - <em>code, graphics</em> - <a href="https://github.com/fieserWolF">https://github.com/fieserWolF</a> <a href="https://csdb.dk/scener/?id=3623">https://csdb.dk/scener/?id=3623</a></li>
 </ul>
 <h1 id="getting-started">Getting Started</h1>
-<p>Dissector comes in two flavors:</p>
-<ul>
-<li>standalone executable for 64-bit systems Linux, MacOS/Darwin and Windows</li>
-<li>Python3 script</li>
-</ul>
-<h2 id="run-the-standalone-executable">Run the standalone executable</h2>
-<p>Just download your bundle and enjoy. Keep in mind that only 64bit systems are supported as I could not find a 32bit system to generate the bundle.</p>
-<h3 id="note-for-windows-users">Note for Windows users</h3>
-<p>If some antivirus scanner puts Dissector into quarantine because it suspects a trojan or virus, simply put it out there again. It isn`t harmful, I used PyInstaller to bundle the standalone executable for you. Unfortunately, the PyInstaller bootloader triggers a false alarm on some systems. I even tried my best and re-compiled the PyInstaller bootloader so that this should not happen anymore. Keep your fingers crossed ;)</p>
-<h3 id="note-for-macos-users">Note for MacOS users</h3>
-<p>Your system might complain that the code is not signed by a certificated developer. Well, I am not, so I signed the program on my own.</p>
-<pre><code>&quot;Dissector&quot; can`t be opened because it is from an unidentified developer.</code></pre>
-<p>You need to right-click or Control-click the app and select “Open”.</p>
 <h2 id="run-the-python3-script-directly">Run the Python3 script directly</h2>
 <p>Download <em>dissector.py</em> and c64labels.json into the same folder on your computer.</p>
 <pre><code>python3 dissector.py </code></pre>

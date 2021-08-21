@@ -12,6 +12,7 @@ reason | description
 open source | easy to modify and to improve, any useful contribution is highly welcome
 portable | available on Linux, MacOS, Windows and any other system supported by Python3
 illegals | full illegal opcode support
+cycles | used cpu-cycles shown for each opcode
 extensive info | extensive C64 memory map carefully gathered from best sources I could find online
 assemblers | ACME and KickAssembler supported, easy to implement other assemblers
 
@@ -75,31 +76,6 @@ Commodore 64 RAM Memory Map V1.2, published 1 Sep 1994
 
 
 # Getting Started
-
-Dissector comes in two flavors:
-
-- standalone executable for 64-bit systems Linux, MacOS/Darwin and Windows
-- Python3 script
-
-## Run the standalone executable
-
-Just download your bundle and enjoy. Keep in mind that only 64bit systems are supported as I could not find a 32bit system to generate the bundle.
-
-### Note for Windows users
-
-If some antivirus scanner puts Dissector into quarantine because it suspects a trojan or virus, simply put it out there again.
-It isn`t harmful, I used PyInstaller to bundle the standalone executable for you.
-Unfortunately, the PyInstaller bootloader triggers a false alarm on some systems.
-I even tried my best and re-compiled the PyInstaller bootloader so that this should not happen anymore. Keep your fingers crossed ;)
-
-### Note for MacOS users
-
-Your system might complain that the code is not signed by a certificated developer. Well, I am not, so I signed the program on my own. 
-```
-"Dissector" can`t be opened because it is from an unidentified developer.
-```
-You need to right-click or Control-click the app and select “Open”.
-
 
 
 ## Run the Python3 script directly
