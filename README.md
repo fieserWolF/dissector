@@ -77,13 +77,38 @@ Commodore 64 RAM Memory Map V1.2, published 1 Sep 1994
 
 # Getting Started
 
+dissector comes in two flavors:
+
+- standalone executable for 64-bit systems Linux, MacOS/Darwin and Windows (see [releases](https://github.com/fieserWolF/dissector/releases))
+- Python3 script
+
+## Run the standalone executable
+
+Just download your bundle at [releases](https://github.com/fieserWolF/dissector/releases) and enjoy.
+Keep in mind that only 64bit systems are supported as I could not find a 32bit system to generate the bundle.
+
+### Note for Windows users
+
+If some antivirus scanner puts dissector into quarantine because it suspects a trojan or virus, simply put it out there again.
+It isn`t harmful, I used PyInstaller to bundle the standalone executable for you.
+Unfortunately, the PyInstaller bootloader triggers a false alarm on some systems.
+I even tried my best and re-compiled the PyInstaller bootloader so that this should not happen anymore. Keep your fingers crossed ;)
+
+### Note for MacOS users
+
+Your system might complain that the code is not signed by a certificated developer. Well, I am not, so I signed the program on my own. 
+```
+"dissector" can`t be opened because it is from an unidentified developer.
+```
+You need to right-click or Control-click the app and select “Open”.
+
+
 
 ## Run the Python3 script directly
 
 Download _dissector.py_ and c64labels.json into the same folder on your computer.
 
     python3 dissector.py 
-
 
 
 ### Prerequisites
@@ -103,8 +128,6 @@ On my Debian GNU/Linux machine I use apt-get to install everything needed:
 apt-get update
 apt-get install python3 python3-argh
 ```
-
-
 # Changelog
 
 ## Future plans
