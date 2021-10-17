@@ -143,7 +143,12 @@ or
 [wolf@abyss-connection.de](wolf@abyss-connection.de)
 
 
-## Changes in 1.0
+## Changes in 1.01
+
+- bugfix: KERNEL labels appear in label-list now
+
+
+## Changes in 1.00
 
 - initial release
 
