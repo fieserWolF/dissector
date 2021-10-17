@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """
-dissector v1.00 [21.08.2021] *** by fieserWolF
+dissector v1.01 [17.10.2021] *** by fieserWolF
 usage: dissector.py [-h] [-lf LABEL_FILE] [-o OFFSET] [-l LIMIT] [-t {acme,kickass}] [-d] [-i] [-ll] [-cc] input_file output_file startaddress
 
 This program disassembles 6502 code.
@@ -37,10 +37,11 @@ import argparse
 
 
 PROGNAME = 'dissector';
-VERSION = '1.00';
-DATUM = '21.08.2021';
+VERSION = '1.01';
+DATUM = '17.10.2021';
 
 MAX_LABEL_TYPES = 20
+MAX_AREA_TYPE = 8   #has to match area_type in .json file
 
 ASM_STRING = {
     "acme": {
@@ -667,7 +668,8 @@ def _write_labels (
     output.append('\n')
     output.append('labels:\n\n')
     #for a in range(0,len(label_def)) :
-    for a in range(0,5) :
+    
+    for a in range(0,(MAX_AREA_TYPE+1)) :
         for data in labels :
             if (data['type'] == a) :
                 output.append("%s\t= " % data['name'])    #name
@@ -865,7 +867,7 @@ def _create_labels (
                     if (this_def['short'] != '') :
                         label_name = label_name + str(this_def['short']) + '_'
                     label_name = label_name + str(label_counter[this_def['area_type']]).zfill(3)
-                    
+
                     #do we find it in memory address or do we have to add +1 or +2 ?
                     add_me = 0
                     #if (this_def['type'] == 0) :    # only internal labels
@@ -900,6 +902,7 @@ def _create_labels (
                         'add': add_me,
                         'comment': this_def['comment']
                     }
+                    #print(tmp)    #debug
                     my_label.append(tmp)   #append this label to the general list
                     #this_def['number'] +=1 #increase number of label
                     label_counter[this_def['area_type']] +=1 #increase number of label
