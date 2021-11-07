@@ -20,7 +20,7 @@
 <h1 class="title">Dissector</h1>
 </header>
 <h1 id="dissector">Dissector</h1>
-<p>Dissector disassembles 6502 code. As of now, this is a commandline-tool. This might change in the future. It runs on 64 bit versions of Linux, MacOS, Windows and other systems supported by Python.</p>
+<p>Dissector disassembles 6502 code. As of now, this primarily is a commandline-tool, but there is an optional gui available. It runs on 64 bit versions of Linux, MacOS, Windows and other systems supported by Python.</p>
 <h1 id="why-dissector">Why Dissector?</h1>
 <table>
 <colgroup>
@@ -94,7 +94,8 @@ Example: ./dissector.py test.prg test.a 2000 -lf c64labels.json -o 2 -l 100 -t a
 <p>Commodore 64 RAM Memory Map V1.2, published 1 Sep 1994 <a href="ftp://arnold.c64.org/pub/docs/C64rom.lib">ftp://arnold.c64.org/pub/docs/C64rom.lib</a> <a href="ftp://arnold.c64.org/pub/docs/C64ram.doc">ftp://arnold.c64.org/pub/docs/C64ram.doc</a></p>
 <h1 id="author">Author</h1>
 <ul>
-<li>fieserWolF/Abyss-Connection - <em>code, graphics</em> - <a href="https://github.com/fieserWolF">https://github.com/fieserWolF</a> <a href="https://csdb.dk/scener/?id=3623">https://csdb.dk/scener/?id=3623</a></li>
+<li>fieserWolF/Abyss-Connection - <em>code</em> - <a href="https://github.com/fieserWolF">https://github.com/fieserWolF</a> <a href="https://csdb.dk/scener/?id=3623">https://csdb.dk/scener/?id=3623</a></li>
+<li>Streetuff/TRSI - <em>code</em> - graphical user interface</li>
 </ul>
 <h1 id="getting-started">Getting Started</h1>
 <p>dissector comes in two flavors:</p>
@@ -113,18 +114,23 @@ Example: ./dissector.py test.prg test.a 2000 -lf c64labels.json -o 2 -l 100 -t a
 <h2 id="run-the-python3-script-directly">Run the Python3 script directly</h2>
 <p>Download <em>dissector.py</em> and c64labels.json into the same folder on your computer.</p>
 <pre><code>python3 dissector.py </code></pre>
+<h1 id="graphical-user-interface">graphical user interface</h1>
+<p>If you prefer a gui, start the script “gui.py”:</p>
+<pre><code>python3 gui.py </code></pre>
+<p>This graphical interface was kindly provided by Streetuff/TRSI. It uses PySimpleGUI library.</p>
 <h3 id="prerequisites">Prerequisites</h3>
 <p>At least this is needed to run the script directly:</p>
 <ul>
 <li>python 3</li>
 <li>argparse</li>
+<li>PySimpleGUI (optional for the graphical user interface)</li>
 </ul>
 <p>Normally, you would use pip like this:</p>
-<pre><code>pip3 install argparse</code></pre>
+<pre><code>pip3 install argparse pysimplegui</code></pre>
 <p>On my Debian GNU/Linux machine I use apt-get to install everything needed:</p>
 <pre><code>apt-get update
 apt-get install python3 python3-argh</code></pre>
-<h1 id="changelog">Changelog</h1>
+<p>PySimpleGui is not included in Debian GNU/Linux yet. You have to install it with pip as described above. # Changelog</p>
 <h2 id="future-plans">Future plans</h2>
 <ul>
 <li>maybe: implement full GUI</li>

@@ -1,7 +1,7 @@
 # Dissector
 
 Dissector disassembles 6502 code.
-As of now, this is a commandline-tool. This might change in the future.
+As of now, this primarily is a commandline-tool, but there is an optional gui available.
 It runs on 64 bit versions of Linux, MacOS, Windows and other systems supported by Python. 
 
 
@@ -72,7 +72,8 @@ Commodore 64 RAM Memory Map V1.2, published 1 Sep 1994
 
 # Author
 
-* fieserWolF/Abyss-Connection - *code, graphics* - [https://github.com/fieserWolF](https://github.com/fieserWolF) [https://csdb.dk/scener/?id=3623](https://csdb.dk/scener/?id=3623)
+* fieserWolF/Abyss-Connection - *code* - [https://github.com/fieserWolF](https://github.com/fieserWolF) [https://csdb.dk/scener/?id=3623](https://csdb.dk/scener/?id=3623)
+* Streetuff/TRSI - *code* - graphical user interface
 
 
 # Getting Started
@@ -111,16 +112,28 @@ Download _dissector.py_ and c64labels.json into the same folder on your computer
     python3 dissector.py 
 
 
+
+# graphical user interface
+
+If you prefer a gui, start the script "gui.py":
+
+    python3 gui.py 
+
+This graphical interface was kindly provided by Streetuff/TRSI.
+It uses PySimpleGUI library.
+
+
 ### Prerequisites
 
 At least this is needed to run the script directly:
 
 - python 3
 - argparse
+- PySimpleGUI (optional for the graphical user interface)
 
 Normally, you would use pip like this:
 ```
-pip3 install argparse
+pip3 install argparse pysimplegui
 ```
 
 On my Debian GNU/Linux machine I use apt-get to install everything needed:
@@ -128,6 +141,7 @@ On my Debian GNU/Linux machine I use apt-get to install everything needed:
 apt-get update
 apt-get install python3 python3-argh
 ```
+PySimpleGui is not included in Debian GNU/Linux yet. You have to install it with pip as described above.
 # Changelog
 
 ## Future plans
