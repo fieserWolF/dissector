@@ -146,7 +146,7 @@ PySimpleGui is not included in Debian GNU/Linux yet. You have to install it with
 
 ## Future plans
 
-- maybe: implement full GUI
+- maybe: implement other architectures
 
 Any help and support in any form is highly appreciated.
 
