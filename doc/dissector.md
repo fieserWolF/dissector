@@ -113,7 +113,7 @@ Download _dissector.py_ and c64labels.json into the same folder on your computer
 
 
 
-# graphical user interface
+### graphical user interface
 
 If you prefer a gui, start the script "gui.py":
 
