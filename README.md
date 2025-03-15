@@ -139,7 +139,7 @@ pip3 install argparse pysimplegui
 On my Debian GNU/Linux machine I use apt-get to install everything needed:
 ```
 apt-get update
-apt-get install python3 python3-argh
+apt-get install python3
 ```
 PySimpleGui is not included in Debian GNU/Linux yet. You have to install it with pip as described above.
 # Changelog
